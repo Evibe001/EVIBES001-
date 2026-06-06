@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E VIBES - Unstoppable Power</title>
+    <meta name="keywords" content="AI News, AI Trends, AI Future, AI Impact, AI Research, AI Technology, AI Development, AI Applications, AI Technology Update, English, Artificial Intelligence, Artificial Intelligence News, Artificial Intelligence Trends, Artificial Intelligence Future, Artificial Intelligence Impact, Artificial Intelligence Research, Artificial Intelligence Revisited, Artificial Intelligence Technology, Artificial Intelligence Development, Artificial Intelligence Applications">
+    <title>E VIBES - Unstoppable AI Power</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #0a0a0a;
+            background-color: #050505;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -22,18 +23,19 @@
         .container {
             position: relative;
             z-index: 1;
+            max-width: 800px;
         }
 
         h1 {
-            font-size: 5rem;
+            font-size: 4rem;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 10px;
-            background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+            letter-spacing: 8px;
+            background: linear-gradient(90deg, #00ff00, #00ffff, #00ff00);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 3s linear infinite;
+            animation: shine 4s linear infinite;
         }
 
         @keyframes shine {
@@ -43,77 +45,90 @@
         }
 
         .subtitle {
-            font-size: 1.5rem;
-            letter-spacing: 5px;
-            color: #aaa;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            color: #00ff00;
             margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .ai-status {
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff00;
+            opacity: 0.8;
         }
 
         .power-bar {
-            width: 300px;
-            height: 10px;
-            background: #222;
+            width: 400px;
+            height: 4px;
+            background: #111;
             margin: 30px auto;
-            border-radius: 5px;
+            border-radius: 2px;
             overflow: hidden;
-            border: 1px solid #333;
+            border: 1px solid #222;
         }
 
         .power-fill {
             height: 100%;
             width: 0%;
-            background: #00ffff;
-            box-shadow: 0 0 20px #00ffff;
-            animation: charge 4s ease-in-out infinite;
+            background: #00ff00;
+            box-shadow: 0 0 15px #00ff00;
+            animation: neural-charge 5s ease-in-out infinite;
         }
 
-        @keyframes charge {
+        @keyframes neural-charge {
             0% { width: 0%; }
-            50% { width: 100%; }
+            20% { width: 10%; }
+            40% { width: 60%; }
+            60% { width: 45%; }
+            80% { width: 95%; }
             100% { width: 100%; }
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 40px;
-            margin-top: 30px;
+            padding: 12px 30px;
+            margin-top: 20px;
             background: transparent;
-            color: #00ffff;
-            border: 2px solid #00ffff;
+            color: #00ff00;
+            border: 1px solid #00ff00;
             text-transform: uppercase;
             text-decoration: none;
             font-weight: bold;
             letter-spacing: 2px;
             transition: 0.3s;
             cursor: pointer;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn:hover {
-            background: #00ffff;
+            background: #00ff00;
             color: #000;
-            box-shadow: 0 0 30px #00ffff;
+            box-shadow: 0 0 20px #00ff00;
         }
 
-        .bg-glow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
-            pointer-events: none;
+        .keywords-cloud {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            color: #444;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-    <div class="bg-glow"></div>
     <div class="container">
-        <h1>E VIBES</h1>
-        <div class="subtitle">UNSTOPPABLE POWER</div>
+        <h1>AI UNSTOPPABLE</h1>
+        <div class="subtitle">E VIBES NEURAL CORE</div>
+        <div class="ai-status">INITIALIZING ARTIFICIAL INTELLIGENCE RESEARCH...</div>
         <div class="power-bar">
             <div class="power-fill"></div>
         </div>
-        <button class="btn" onclick="alert('POWER SURGE DETECTED!')">Engage Power</button>
+        <button class="btn" onclick="alert('ACCESSING NEURAL CORE... ACCESS GRANTED.')">Access AI Data</button>
+        <div class="keywords-cloud">
+            AI News | AI Trends | AI Future | AI Impact | AI Research | AI Technology | AI Development | AI Applications | Artificial Intelligence
+        </div>
     </div>
 </body>
 </html>
