@@ -1,8 +1,15 @@
 import time
 import sys
 
+# Use local power_logger if available
+try:
+    from power_logger import log
+except ImportError:
+    def log(msg, type="INFO"):
+        print(f"[{type}] {msg}")
+
 def charge_power():
-    print("Initializing E VIBES Power Core...")
+    log("Initializing E VIBES Power Core...", "INFO")
     time.sleep(1)
 
     for i in range(0, 101, 10):
@@ -11,8 +18,9 @@ def charge_power():
         sys.stdout.flush()
         time.sleep(0.2)
 
-    print("\n\n⚡ POWER FULLY CHARGED! ⚡")
-    print("E VIBES is now UNSTOPPABLE.")
+    print("\n")
+    log("POWER FULLY CHARGED!", "SUCCESS")
+    log("E VIBES IS NOW UNSTOPPABLE.", "POWER")
 
 if __name__ == "__main__":
     charge_power()

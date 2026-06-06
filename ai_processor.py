@@ -2,6 +2,13 @@ import random
 import time
 import sys
 
+# Use local power_logger if available
+try:
+    from power_logger import log
+except ImportError:
+    def log(msg, type="INFO"):
+        print(f"[{type}] {msg}")
+
 AI_KEYWORDS = [
     "AI News", "AI Trends", "AI Future", "AI Impact", "AI Research",
     "AI Technology", "AI Development", "AI Applications", "AI Technology Update",
@@ -22,25 +29,19 @@ AI_INSIGHTS = [
 ]
 
 def simulate_ai_processing():
-    print("--- E VIBES AI NEURAL PROCESSING UNIT ---")
+    log("--- E VIBES AI NEURAL PROCESSING UNIT ---", "POWER")
     time.sleep(1)
 
     for _ in range(5):
         keyword = random.choice(AI_KEYWORDS)
         insight = random.choice(AI_INSIGHTS)
 
-        print(f"\n[ANALYZING] {keyword}...")
-        for char in "..........":
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.1)
-
-        print(f"\n[INSIGHT] {insight}")
+        log(f"ANALYZING: {keyword}", "INFO")
+        time.sleep(0.5)
+        log(f"INSIGHT: {insight}", "SUCCESS")
         time.sleep(0.5)
 
-    print("\n" + "="*40)
-    print("AI PROCESSING COMPLETE. THE FUTURE IS UNSTOPPABLE.")
-    print("="*40)
+    log("AI PROCESSING COMPLETE. THE FUTURE IS UNSTOPPABLE.", "POWER")
 
 if __name__ == "__main__":
     simulate_ai_processing()
